@@ -1,1 +1,1 @@
-# primary project
+# primary project structure
