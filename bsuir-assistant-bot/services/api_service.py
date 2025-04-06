@@ -6,7 +6,7 @@ from environs import Env
 env = Env()
 env.read_env()
 
-API_URL = env.str("API_URL")  # Ссылка на API с картинками котов
+API_URL = env.str("API_URL")  
 
 class ApiService:
     async def __get_cat_image_url(self) -> str:
@@ -23,7 +23,7 @@ class ApiService:
             return "https://http.cat/500"  
 
     async def get_response(self, query: str):
-        await asyncio.sleep(random.uniform(0.5, 2.0))  # Имитация задержки
+        await asyncio.sleep(random.uniform(0.5, 2.0))  
 
         responses = [
             "Это тестовый ответ от RAG-системы.",
